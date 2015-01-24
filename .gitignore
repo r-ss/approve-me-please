@@ -1,0 +1,19 @@
+logs/
+media/temp/
+media/uploads/
+
+db.sqlite3
+
+*.pyc
+
+
+# OS generated files #
+######################
+*.tmp
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

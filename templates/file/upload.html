@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+    <div id="title" class="title">
+        <div class="title__wrap">
+            <div><a class="leading" href="/">Upload</a></div>
+        </div>
+    </div>
+
+    <div id="content" class="content">
+        <div class="content__wrap">
+            <div class="form">
+                
+
+                <form enctype="multipart/form-data" method="POST" action="">
+
+                    <div>
+                        {{ form.file_file.errors }}
+                        <label for="id_file_file">Select File:</label>
+                        {{ form.file_file }}
+                    </div>
+                   
+
+                    <div class="widthheight">
+                        {{ form.width.errors }}{{ form.height.errors }}
+                        <span><label for="id_width">Width &mdash; </label>{{ form.width }}</span>
+                        <span>{{ form.height }}<label for="id_height"> &mdash; Height</label></span>
+                    </div>
+
+                    <div class="comment">
+                        {{ form.comment.errors }}
+                        <label for="id_comment">Comment:</label>
+                        <div>{{ form.comment }}</div>
+                    </div>
+
+                    <div>                        
+                        <input class="button" type="submit" value="OK">
+                    </div>                    
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div id="info" class="info">
+        <div class="info__wrap">
+            
+        </div>
+    </div>
+    
+
+
+{% endblock %}
