@@ -28,11 +28,11 @@ if socket.gethostname() == 'rssrv2':
     PRODUCTION = False
 
 if PRODUCTION:
-    DEBUG = False
+    DEBUG = True
     #SITENAME = 'approve me please'
     #SITEDOMAIN = 'approve-me-please.com'
     SITEHOST = 'http://approve-me-please.com'
-    MEDIA_URL = 'http://ress.ws/media/'
+    MEDIA_URL = 'http://approve-me-please.com/media/'
 else:
     DEBUG = True
     #SITENAME = 'approve me please'
@@ -46,8 +46,8 @@ else:
 MEDIA_ROOT = BASE.child('media')
 
 
-MEDIA_TEMP_DIRECTORY = '%s%s' % (BASE, '/media/temp/')
-MEDIA_UPLOADS_DIRECTORY = '%s%s' % (BASE, '/media/uploads/')
+MEDIA_TEMP_DIRECTORY = '%s%s' % (BASE, '/temp/')
+MEDIA_UPLOADS_DIRECTORY = '%s%s' % (BASE, '/uploads/')
 
 
 #TATIC_ROOT = '%s/static/' % MEDIA_ROOT

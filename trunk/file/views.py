@@ -74,7 +74,7 @@ def upload(request):
             messages.error(request, u'No File ;(')
             return render(request, 'file/upload.html', {'form': form})
     else:
-        form = FileUploadForm(initial = {'width': '111', 'height': '222',}) 
+        form = FileUploadForm(initial = {'width': '240', 'height': '400',}) 
         return render(request, 'file/upload.html', {'form': form})
 
 def make_key(num):

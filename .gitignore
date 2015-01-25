@@ -1,6 +1,6 @@
 logs/
-media/temp/
-media/uploads/
+temp/
+uploads/
 
 db.sqlite3
 
