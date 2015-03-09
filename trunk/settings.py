@@ -34,7 +34,7 @@ if PRODUCTION:
     SITEHOST = 'http://approve-me-please.com'
     MEDIA_URL = 'http://approve-me-please.com/media/'
 else:
-    DEBUG = True
+    DEBUG = False
     #SITENAME = 'approve me please'
     #SITEDOMAIN = 'approve-me-please.com'
     SITEHOST = 'http://192.168.1.11:8000'
@@ -105,7 +105,7 @@ SECRET_KEY = '1n0go@xw264v-bh7e@24$=(y2i7kc3r1k5kg*^v@8l6tv3c)f5'
 # SECURITY WARNING: don't run with debug turned on in production!
 #TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -133,6 +133,8 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'trunk.urls'
 
 WSGI_APPLICATION = 'trunk.wsgi.application'
+
+ALLOWED_HOSTS = ['*', 'approve-me-please.com', 'www.approve-me-please.com', 'localhost', '127.0.0.1', '192.168.1.33',]
 
 
 # Database

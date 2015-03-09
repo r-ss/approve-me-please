@@ -1,0 +1,109 @@
+/* Reset */
+html,body,div,span,object,h1,h2,h3,h4,h5,h6,p,pre,a,em,img,small,strong,b,i,ol,ul,li,form,label,legend,table,caption,tr,th,td{
+	margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;
+}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+table{border-collapse:collapse;border-spacing:0}
+
+/* Ok, styling */
+
+@font-face {
+font-family: Brandon_Grotesque_regular;
+src: url('fonts/Brandon_Grotesque_reg.otf') format('opentype');
+}
+
+@font-face {
+font-family: Brandon_Grotesque_black;
+src: url('fonts/Brandon_Grotesque_blk.otf') format('opentype');
+}
+
+
+/* VARIABLES */
+@color-text: #222;
+@color-link: #0099fa;
+@color-link-hover: #000;
+
+@font-stack: Brandon_Grotesque_regular, Arial, Helvetica, sans-serif;
+@font-stack-titles: Brandon_Grotesque_black, Arial, Helvetica, sans-serif;
+
+@font-size-base:          16px;
+@font-size-h3:            18px;
+@font-size-h2:            60px;
+@font-size-h1:            60px;
+
+@line-height-base:        1.75;
+@headings-line-height:    1.00;
+
+/* MIXINS */
+.m { margin: 0; }
+.p { padding: 0; }
+.bold { font-weight:bold; }
+.border-radius (@radius: 6px) { -webkit-border-radius: @radius; -moz-border-radius: @radius; border-radius: @radius; }
+
+
+html { width: 100%; height:100%; min-height: 100%; .m; color: @color-text; font-family: @font-stack; font-size: @font-size-base; line-height: @line-height-base;}
+body { text-rendering: optimizeLegibility; .m; .p; width: 100%; height:100%; min-height: 100%;}
+
+#debug_field {position: absolute; top: 10px; left: 10px; z-index: 111; color: #ccc;}
+
+h1, h2, h3 { .m; margin-bottom: 10px;}
+
+h1				{ font-family: @font-stack-titles; font-size: @font-size-h2; line-height: @headings-line-height; display: inline; }
+h2, .leading	{ font-family: @font-stack-titles; font-size: @font-size-h2; line-height: @headings-line-height; }
+h3				{ font-family: @font-stack-titles; font-size: @font-size-h3; line-height: @headings-line-height; }
+
+a { color: @color-link; text-decoration: none; }
+a:hover { color: @color-link-hover; transition: color 125ms; }
+
+p, a {margin-bottom: 12px;}
+
+.title { width: 100%; min-height: 80px;}
+.content {display: block; width: 100%; text-align: center;}
+.info {display: block; width: 100%;  min-height: 60px;}
+.footer {width: 100%; height: 25px; text-align: center; }
+
+.title__wrap {position: relative; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); text-align: center;}
+.title a {color: black; }
+
+.info__wrap {position: relative; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); text-align: center;}
+.info__wrap .comment {height: 45px;}
+
+.bottom_line:after { content: ""; width: 100px; height: 1px; position: relative; top: -6px; left: 50%; margin-left: -50px; display: block; border-bottom: 1px solid #666;}
+
+
+
+
+
+.form input {margin-top: 7px; margin-bottom: 25px;}
+
+input {font-family: @font-stack; font-size: @font-size-base; border: 1px solid black; padding: 4px 8px 4px 8px; .border-radius;}
+.widthheight input {width: 40px; text-align: center;}
+.comment input {width: 300px;}
+
+input.button {color: white; background: black; min-width: 50px; }
+
+
+/* System Messages */
+#messages {position: fixed; left: 0; top: 0px; z-index: 666; color: white; width: 100%; font-size: 0.80em; text-transform: uppercase;}
+#messages li {height: 50px; margin-bottom: 1px; line-height: 50px;}
+#messages li.info {background: #000000;}
+#messages li.success {background: #2ebcea;}
+#messages li.error {background: #cc1836;}
+#messages li div {width: 960px; margin: 0 auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

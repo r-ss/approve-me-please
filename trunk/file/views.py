@@ -22,6 +22,23 @@ def home(request):
     return render(request, 'home.html', context)
 
 def file_view(request, permalink):
+
+    entries_all = File.objects.all()[:20]
+    # print all_entries.len()
+    count = len(entries_all)
+    if count > 10:
+        entries = File.objects.all()[:1]
+
+        for f in entries:
+            # delete_file(a)
+            # print a.permalink
+            filename = '%s.%s' % (f.permalink, f.filetype)
+            delete_file(MEDIA_UPLOADS_DIRECTORY + filename)
+            f.delete()
+            messages.success(request, u'File deleted') 
+            # print len(entries)
+
+
     file = get_object_or_404(File, permalink__exact = permalink)
     return render(request, 'file/view.html', {'file': file})
 
