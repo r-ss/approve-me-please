@@ -35,7 +35,7 @@ def file_view(request, permalink):
             filename = '%s.%s' % (f.permalink, f.filetype)
             delete_file(MEDIA_UPLOADS_DIRECTORY + filename)
             f.delete()
-            messages.success(request, u'File deleted') 
+            messages.success(request, u'File deleted %s' % filename) 
             # print len(entries)
 
 
