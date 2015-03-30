@@ -26,7 +26,7 @@ def file_view(request, permalink):
     entries_all = File.objects.all()[:20]
     # print all_entries.len()
     count = len(entries_all)
-    if count > 10:
+    if count > 200:
         entries = File.objects.all()[:1]
 
         for f in entries:
@@ -35,7 +35,7 @@ def file_view(request, permalink):
             filename = '%s.%s' % (f.permalink, f.filetype)
             delete_file(MEDIA_UPLOADS_DIRECTORY + filename)
             f.delete()
-            messages.success(request, u'File deleted %s' % filename) 
+            #messages.success(request, u'File deleted %s' % filename) 
             # print len(entries)
 
 
